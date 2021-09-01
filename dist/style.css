@@ -23,4 +23,9 @@ body{
     max-width: 90em;
     font-family: 'Space Mono', monospace;
     font-size: 1.5rem;
+    background: var(--lightGrayishCyanA);
+}
+
+.container {
+    min-height: 100vh;
 }

@@ -18,41 +18,64 @@
       <p>tter</p>
     </header>
     
-    <section>
-      <div class="bill_entry">
-          <div></div>
-          <div></div>
-          <div></div>
+    <section class="calc-info"> 
+      <div class="bill_info">
+          <div class="bill_total">
+            <p class="title">Bill</p>
+            <input type="text" name="bill" placeholder="Bill">
+          </div>
+
+          <div class="tip_select">
+            <p class="title">Select Tip %</p>
+            <label class="tip_amount">5%
+                <input type="radio" name="tip" value="5" id="">
+            </label>
+            <label class="tip_amount">10%
+                <input type="radio" name="tip" value="10" id="">
+            </label>
+            <label class="tip_amount">15%
+                <input type="radio" name="tip" value="15" id="">
+            </label>
+            <label class="tip_amount">25%
+              <input type="radio" name="tip" value="25" id="">
+            </label>
+            <label class="tip_amount">50%
+              <input type="radio" name="tip" value="50" id="">
+            </label>
+            <input type="text" name="custom" placeholder="Custom">
+          </div>
+
+          <div class="ppl_total">
+            <p class="title">Number of People</p>
+            <input type="text" name="people" placeholder="People">
+          </div>
       </div>
       
       <div class="tip_display">
-          <div></div>
-          <div></div>
-          <div></div>
+          <div class="details">
+            <div class="display">
+              <p>Tip Amount</p>
+              <p>/ person</p>
+            </div>
+            <input type="text" name="amount" placeholder="Tip Amount" disabled>
+          </div>
+
+          <div class="details">
+            <div class="display">
+              <p>Total</p>
+              <p>/ person</p>
+            </div>
+            <input type="text" name="amount" placeholder="Total Amount" disabled>
+          </div>
+
+          <div class="reset">
+            <input type="reset" value="Reset">
+          </div>
       </div>
     </section>
   
   </main>
 
-  Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
