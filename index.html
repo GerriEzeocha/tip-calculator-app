@@ -21,7 +21,7 @@
       <div class="bill_info">
           <div class="bill_total">
             <p class="title">Bill</p>
-            <input type="text" name="bill" placeholder="0">
+            <input type="text" name="bill" id="bill_total" placeholder="0">
           </div>
 
           <div class="tip_select">
@@ -44,7 +44,7 @@
                   <input type="radio" name="tip" value="50" id="50">
                   <label for="50">50%</label>
 
-                  <input type="text" name="custom" class="custom" placeholder="Custom">
+                  <input type="text" name="tip" class="custom" placeholder="Custom">
 
                 
             </div>
@@ -52,8 +52,12 @@
           </div>
 
           <div class="ppl_total">
-            <p class="title">Number of People</p>
-            <input type="text" name="people" placeholder="0">
+            <div class="ppl_total_labels">
+              <p class="title">Number of People</p>
+              <p class="title num_error" >Can't be zero</p>
+            </div>
+            
+            <input type="text" name="people" id="num_ppl" placeholder="0">
           </div>
       </div>
       
@@ -65,7 +69,7 @@
                   <p>Tip Amount</p>
                   <p>/ person</p>
                 </div>
-                <input type="text" name="amount" placeholder="$0.00" disabled>
+                <input type="text" name="amount" id="tip_person" placeholder="$0.00" disabled>
               </div>
 
               <div class="details">
@@ -73,11 +77,11 @@
                   <p>Total</p>
                   <p>/ person</p>
                 </div>
-                <input type="text" name="amount" placeholder="$0.00" disabled>
+                <input type="text" name="total" id="total_person" placeholder="$0.00" disabled>
               </div>
 
-                <div class="reset">
-                  <input type="reset" value="Reset">
+                <div class="btn">
+                  <button class="reset" id="reset">Reset</button>
                 </div>
           </div>
       </div>
@@ -91,5 +95,6 @@
     Coded by <a href="#">Your Name Here</a>.
     </div>
 
+    <script src="js/script.js"></script>
 </body>
 </html>

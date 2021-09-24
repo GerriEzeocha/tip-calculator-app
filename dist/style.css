@@ -6,6 +6,7 @@
     --lightGrayishCyanA: hsl(185, 41%, 84%);
     --lightGrayishCyanB: hsl(189, 41%, 97%);
     --white: hsl(0, 0%, 100%);
+    --disabled: hsl(183, 80%, 22%);
 }
 
 html{
@@ -138,6 +139,7 @@ input[type=text]{
     width: 48%;
     height: 3rem;
     text-align: center;
+    cursor: pointer;
 }
 .tip_buttons .custom:focus{
     outline: .2rem solid var(--strongCyan);
@@ -156,9 +158,20 @@ input[type=text]{
     background-image: url("/images/icon-person.svg");
     background-repeat: no-repeat;
     padding-right: 0.9rem;
+    cursor: pointer;
 }
 .ppl_total input[type=text]:focus{
     outline: .2rem solid var(--strongCyan);
+}
+
+.ppl_total_labels {
+    display: flex;
+    justify-content: space-between;
+}
+.num_error{
+    display: none;
+    text-align: right;
+    color: red;
 }
 
 /**Tip Display**/
@@ -196,24 +209,29 @@ input[type=text]{
     font-size: 2rem;
 }
 
-.tip_dis_wrapper input[type="reset"]{
+
+.tip_dis_wrapper .reset/** input[type="reset"]**/{
     width: 100%;
-    display: flex;
     font-size: 1.5rem;
     text-transform: uppercase;
     color: var(--veryDarkCyan);
-    background-color: var(--strongCyan);
+    background-color: var(--disabled);
     padding: .5rem .2rem;
     font-family: 'Space Mono', monospace;
     font-weight: bold;
     border-radius: .5rem;
+    border: none;
+}
+
+.tip_dis_wrapper .btn_enabled{
+    background-color: var(--strongCyan);
     cursor: pointer;
 }
-.tip_dis_wrapper input[type="reset"]:hover{
-    background-color: var(--lightGrayishCyanA);
+
+/** errors **/
+.bill_total .err_border {
+    border: .1rem solid red;
 }
-
-
 
 
 
@@ -262,13 +280,14 @@ input[type=text]{
         width: 70%;
         display: flex;
         border-radius: 2.4rem;
-        box-shadow: .2rem .2rem .2rem .1rem rgba(0, 0, 0, 0.5)
+        box-shadow: .1rem .7rem .4rem .1rem rgba(0, 1, 1, 0.1)
     }
 
     .tip_buttons label{
         width: 31%;
         height: 4rem;
         padding: .8rem;
+
     }
 
     .tip_buttons .custom{
@@ -290,7 +309,7 @@ input[type=text]{
         font-size: 2.5rem;
     }
 
-    .tip_dis_wrapper input[type="reset"]{
+    .tip_dis_wrapper .reset{
             position: relative;
             top: 9.1rem;
     }
