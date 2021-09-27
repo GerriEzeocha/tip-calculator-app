@@ -51,7 +51,7 @@ body{
 
 .calc_info{
     background: var(--white);
-    max-width: 64rem;
+    max-width: 68rem;
 }
 .bill_info{
     padding: 2rem;
@@ -227,9 +227,14 @@ input[type=text]{
     background-color: var(--strongCyan);
     cursor: pointer;
 }
+.tip_dis_wrapper .btn_enabled:hover{
+    background-color: var(--lightGrayishCyanA);
+}
+
 
 /** errors **/
-.bill_total .err_border {
+.bill_total .err_border,
+.ppl_total .err_border {
     border: .1rem solid red;
 }
 
