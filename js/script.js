@@ -2,7 +2,7 @@ const billInput = document.getElementById("bill_total")
 const pplInput = document.getElementById("num_ppl");
 const resetBtn = document.getElementById("reset");
 var tips = document.getElementsByName('tip');
-var custInput = document.getElementsByClassName("custom")
+const custInput = document.getElementById("custom");
 
 let tipPerson = document.getElementById("tip_person");
 let totalPerson = document.getElementById("total_person");
@@ -11,7 +11,6 @@ let totalPerson = document.getElementById("total_person");
 let bill ;
 let numOfppl ;
 let tipPercent ;
-let custom;
 
 
 /**bill input and validation*/
@@ -33,16 +32,7 @@ billInput.addEventListener("focusout", function(e){
     }
 })
 
-
-/** tips */
-tips.forEach(tip=> {
-    tip.addEventListener("click", function(e){
-        calculateTip();
-    })
-});
-
-
-
+/**Ppl info and validation */
 pplInput.addEventListener("focusout", function(e){
     if((this.value <= 0) || isNaN(this.value)){
         pplInput.classList.add("err_border");
@@ -56,23 +46,41 @@ pplInput.addEventListener("focusout", function(e){
     }
 })
 
+/** tips */
+tips.forEach(tip=> {
+    tip.addEventListener("click", function(e){
+        custInput.value = ""
+        if((billInput.value <= 0) || (pplInput.value <= 0)){
+            tipPerson.value = "$0.00";
+            totalPerson.value = "$0.00";
+        } else{
+           calculateTip(); 
+        }
+        
+    })
+});
+
+custInput.addEventListener("focusin", function(e){
+        tips.forEach(tip => {
+            tip.checked = false;
+        });
+    })
+
 
 function calculateTip(){
-        custom = parseInt(custInput.value);
-
-       if(custInput.value <= 0){
-            tipPercent = (Array.from(tips).find(radio => radio.checked)).value;
+    if(custInput.value > 0){
+        tipPercent = parseInt(custInput.value);  
+      } else {
+          tipPercent = (Array.from(tips).find(radio => radio.checked)).value;
+      }
+            //tipPercent = (Array.from(tips).find(radio => radio.checked)).value;
             tipPercent = tipPercent / 100;
             var total = bill + (bill * tipPercent);
             total = Math.round((total * 100)/100);
             tipPerson.value = "$"+((bill * tipPercent) / numOfppl).toFixed(2);
-            totalPerson.value = "$"+(total / numOfppl).toFixed(2);
-       }     
-        
+            totalPerson.value = "$"+(total / numOfppl).toFixed(2);   
     
 }
-
-
 
 /**reseting form */
 
