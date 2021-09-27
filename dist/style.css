@@ -278,8 +278,8 @@ input[type=text]{
     }
 }
 @media (min-width: 770px) {
-    html{
-        font-size: 80%;
+    body{
+        height: 98vh;
     }
     .calc_info{
         width: 70%;
