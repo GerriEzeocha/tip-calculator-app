@@ -308,6 +308,7 @@ input[type=text]{
         display: flex;
         flex-direction: column;
         padding: 2rem;
+        flex-wrap: wrap;
     }
 
     .details input[type="text"]{
