@@ -37,7 +37,7 @@ body{
     margin: 3rem;  
 }
 
-.calc_title p {
+.calc_title h1 {
     text-transform: uppercase;
     font-weight: bold;
     font-size: 2rem;
@@ -280,6 +280,9 @@ input[type=text]{
 @media (min-width: 770px) {
     body{
         height: 98vh;
+    }
+    .calc_title h1 {
+        
     }
     .calc_info{
         width: 70%;
