@@ -281,9 +281,7 @@ input[type=text]{
     body{
         height: 98vh;
     }
-    .calc_title h1 {
-        
-    }
+
     .calc_info{
         width: 93%;
         display: flex;
@@ -325,9 +323,6 @@ input[type=text]{
         font-size: 1rem;
     }
     
-    .details input[type="text"]{
-    }
-
     .tip_dis_wrapper .reset{
             position: relative;
             top: 9.1rem;
@@ -337,6 +332,13 @@ input[type=text]{
 }
 
 @media (min-width: 1028px) {
+        .details p{
+        font-size: 1rem;
+    }
+    
+    .details p:first-child{
+        font-size: 1.5rem;
+    }
     .details input[type="text"]{
         font-size: 2.5rem;
     }
