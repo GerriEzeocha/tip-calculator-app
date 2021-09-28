@@ -210,7 +210,7 @@ input[type=text]{
 }
 
 .details input[type="text"]::placeholder{
-    color: color: var(--strongCyan);
+    color: var(--strongCyan);
 }
 
 
