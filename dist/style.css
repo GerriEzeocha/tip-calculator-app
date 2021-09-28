@@ -285,10 +285,13 @@ input[type=text]{
         
     }
     .calc_info{
-        width: 70%;
+        width: 93%;
         display: flex;
         border-radius: 2.4rem;
         box-shadow: .1rem .7rem .4rem .1rem rgba(0, 1, 1, 0.1)
+    }
+    .bill_info{
+        width: 67%;   
     }
 
     .tip_buttons label{
@@ -314,8 +317,15 @@ input[type=text]{
         flex-wrap: wrap;
     }
 
+    .details p{
+        font-size: 0.9rem;
+    }
+    
+    .details p:first-child{
+        font-size: 1rem;
+    }
+    
     .details input[type="text"]{
-        font-size: 2.5rem;
     }
 
     .tip_dis_wrapper .reset{
@@ -324,4 +334,10 @@ input[type=text]{
     }
 
 
+}
+
+@media (min-width: 1028px) {
+    .details input[type="text"]{
+        font-size: 2.5rem;
+    }
 }
